@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(um, dois) {
+  return um && dois;
 }
 
 // Desafio 2
