@@ -15,7 +15,7 @@ function splitSentence(texto) {
 
 // Desafio 4
 function concatName(nomes) {
-  return nomes.at(-1).concat(", ", nomes[0])
+  return nomes[nomes.length-1].concat(", ", nomes[0])
 }
 
 // Desafio 5
