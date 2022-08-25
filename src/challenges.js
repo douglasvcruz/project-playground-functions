@@ -24,7 +24,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
 function highestCount(quantidade) {
   let numero = quantidade[0]
   let count = 0
@@ -43,20 +42,31 @@ function highestCount(quantidade) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
-  return 'cat2'
-} else if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
-  return "cat1"
-} else {
-  return 'os gatos trombam e o rato foge'
-}
+  if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    return 'cat2'
+  } else if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
+    return "cat1"
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(number) {
+  let resultado = []
+  for (i = 0; i < number.length; i += 1) {
+      if (number[i] % 3 == 0 && number[i] % 5 == 0) {
+          resultado.push("fizzBuzz")
+      } else if (number[i] % 3 == 0) {
+          resultado.push("fizz")
+      } else if (number[i] % 5 == 0) {
+          resultado.push("buzz")
+      } else {
+          resultado.push("bug!")
+      }
+  }
+  return resultado;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
