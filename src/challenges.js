@@ -68,11 +68,28 @@ function fizzBuzz(number) {
   return resultado;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(palavra) {
+
+  let palavraEncode = '';
+  palavraEncode = palavra.replace(/a/g, 1);
+  palavraEncode = palavraEncode.replace(/e/g, 2);
+  palavraEncode = palavraEncode.replace(/i/g, 3);
+  palavraEncode = palavraEncode.replace(/o/g, 4);
+  palavraEncode = palavraEncode.replace(/u/g, 5);
+
+  return palavraEncode;
+};
+function decode(palavra2) {
+  
+  let palavraDecode = '';
+
+  palavraDecode = palavra2.replace(/1/g, 'a');
+  palavraDecode = palavraDecode.replace(/2/g, 'e');
+  palavraDecode = palavraDecode.replace(/3/g, 'i');
+  palavraDecode = palavraDecode.replace(/4/g, 'o');
+  palavraDecode = palavraDecode.replace(/5/g, 'u');
+
+  return palavraDecode;
 }
 
 // Desafio 10
