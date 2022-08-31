@@ -79,8 +79,9 @@ function encode(palavra) {
 
   return palavraEncode;
 };
+
 function decode(palavra2) {
-  
+
   let palavraDecode = '';
 
   palavraDecode = palavra2.replace(/1/g, 'a');
@@ -93,9 +94,23 @@ function decode(palavra2) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(lista, nomes) {
+
+  let obj = [];
+  lista = lista.sort();
+
+  if (lista.length === 0) {
+    return "Vazio!";
+  }
+
+  for (let i in lista) {
+    obj.push({ tech: lista[i], name: nomes });
+  }
+
+  return obj;
+  
 }
+
 
 module.exports = {
   calcArea,
