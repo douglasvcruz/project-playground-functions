@@ -15,7 +15,7 @@ function splitSentence(texto) {
 
 // Desafio 4
 function concatName(nomes) {
-  return nomes[nomes.length - 1] + (', ' + nomes[0]);
+  return nomes[nomes.length - 1] + ', ' + nomes[0];
 }
 
 // Desafio 5
@@ -44,11 +44,11 @@ function highestCount(quantidade) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
-  } else if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
+  } 
+  if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
     return 'cat1';
-  } {
+  } 
     return 'os gatos trombam e o rato foge';
-  }
 }
 
 // Desafio 8
@@ -69,7 +69,6 @@ function fizzBuzz(number) {
 }
 // Desafio 9
 function encode(palavra) {
-
   let palavraEncode = '';
   palavraEncode = palavra.replace(/a/g, 1);
   palavraEncode = palavraEncode.replace(/e/g, 2);
@@ -78,10 +77,9 @@ function encode(palavra) {
   palavraEncode = palavraEncode.replace(/u/g, 5);
 
   return palavraEncode;
-};
+}
 
 function decode(palavra2) {
-
   let palavraDecode = '';
 
   palavraDecode = palavra2.replace(/1/g, 'a');
@@ -95,22 +93,19 @@ function decode(palavra2) {
 
 // Desafio 10
 function techList(lista, nomes) {
-
   let obj = [];
   lista = lista.sort();
 
   if (lista.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
 
-  for (let i in lista) {
+  for (let i = 0; i < lista.length; i += 1) {
     obj.push({ tech: lista[i], name: nomes });
   }
 
   return obj;
-  
 }
-
 
 module.exports = {
   calcArea,
