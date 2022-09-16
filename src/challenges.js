@@ -15,7 +15,7 @@ function splitSentence(texto) {
 
 // Desafio 4
 function concatName(nomes) {
-  return nomes[nomes.length - 1] + ', ' + nomes[0];
+  return `${nomes[nomes.length - 1]}, ${nomes[0]}`;
 }
 
 // Desafio 5
@@ -28,45 +28,50 @@ function highestCount(quantidade) {
   let numero = quantidade[0];
   let count = 0;
 
-  for (let i in quantidade) {
+  for (let i = 0; i <= quantidade.length; i += 1) {
     if (quantidade[i] > numero) {
       numero = quantidade[i];
+      count = 0;
     }
-  }
-  for (let i in quantidade) {
-    if (quantidade[i] === numero) {
+    if (numero === quantidade[i]) {
       count += 1;
     }
   }
   return count;
 }
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
-  } 
+  }
   if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
     return 'cat1';
-  } 
-    return 'os gatos trombam e o rato foge';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
+function fizz(number, resultado) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    resultado.push('fizzBuzz');
+  } else if (number % 3 === 0) {
+    resultado.push('fizz');
+  } else if (number % 5 === 0) {
+    resultado.push('buzz');
+  } else {
+    resultado.push('bug!');
+  }
+}
+
 function fizzBuzz(number) {
   let resultado = [];
-  for (let i in number) {
-    if (number[i] % 3 === 0 && number[i] % 5 === 0) {
-      resultado.push('fizzBuzz');
-    } else if (number[i] % 3 === 0) {
-      resultado.push('fizz');
-    } else if (number[i] % 5 === 0) {
-      resultado.push('buzz');
-    } else {
-      resultado.push('bug!');
-    }
+  for (let i = 0; i < number.length; i += 1) {
+    fizz(number[i], resultado);
   }
   return resultado;
 }
+
 // Desafio 9
 function encode(palavra) {
   let palavraEncode = '';
