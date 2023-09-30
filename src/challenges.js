@@ -56,13 +56,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizz(number) {
   if (number % 15 === 0) {
     return 'fizzBuzz';
-  } else if (number % 3 === 0) {
+  } if (number % 3 === 0) {
     return 'fizz';
-  } else if (number % 5 === 0) {
+  } if (number % 5 === 0) {
     return 'buzz';
-  } else {
-    return 'bug!';
   }
+  return 'bug!';
 }
 
 function fizzBuzz(numbers) {
@@ -75,7 +74,7 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(word) {
-  return word.replace(/[aeiou]/g, (letter) => 'aeiou'.indexOf(letter) + 1)
+  return word.replace(/[aeiou]/g, (letter) => 'aeiou'.indexOf(letter) + 1);
   // return palavra
   //   .replace(/a/g, 1)
   //   .replace(/e/g, 2)
@@ -85,12 +84,12 @@ function encode(word) {
 }
 
 function decode(word) {
-  return word.replace(/[1-5]/g, (number) => 'aeiou'[number - 1])
-    // .replace(/1/g, 'a')
-    // .replace(/2/g, 'e')
-    // .replace(/3/g, 'i')
-    // .replace(/4/g, 'o')
-    // .replace(/5/g, 'u');
+  return word.replace(/[1-5]/g, (number) => 'aeiou'[number - 1]);
+  // .replace(/1/g, 'a')
+  // .replace(/2/g, 'e')
+  // .replace(/3/g, 'i')
+  // .replace(/4/g, 'o')
+  // .replace(/5/g, 'u');
 }
 
 // Desafio 10
@@ -98,11 +97,11 @@ function techList(list, name) {
   if (list.length === 0) return 'Vazio!';
 
   list.sort();
-  let techList = [];
+  let newTechList = [];
   for (let tech of list) {
-    techList.push({ tech, name });
+    newTechList.push({ tech, name });
   }
-  return techList;
+  return newTechList;
 }
 
 module.exports = {

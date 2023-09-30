@@ -39,7 +39,7 @@ function hydrate(numbers) {
 
   for (let quantity of quantities) {
     sum += Number(quantity);
-  };
+  }
   if (sum === 1) {
     return `${sum} copo de água`;
   }
